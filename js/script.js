@@ -120,8 +120,8 @@ var tl5 = gsap.timeline({
     scrollTrigger: {
         trigger: ".page4",
         scroller: ".main",
-        start: "-10%",
-        end: "10%",
+        start: "-20%",
+        end: "-10%",
         scrub: 3
     }
 });
@@ -129,5 +129,18 @@ var tl5 = gsap.timeline({
 tl5.to(".main", {
     backgroundColor: "#fff"
 });
+
+var tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page4",
+        scroller: ".main",
+        start: "top 27%",
+        end: "top 0",
+        scrub: 3
+    }
+});
+
+tl5.to(".page4 video", { width: "90%" }, "anim");
+
 
 
