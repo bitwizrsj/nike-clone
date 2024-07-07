@@ -1,0 +1,13 @@
+#container3D canvas {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure the 3D canvas has a lower z-index */
+}
+
+.hero h1 {
+    position: fixed;
+    z-index: 9;
+}

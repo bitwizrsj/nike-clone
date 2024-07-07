@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sneaker 1.5mb
+* source:	https://sketchfab.com/3d-models/sneaker-15mb-4293f6b1faa5403eb426f5e5e7cdafaf
+* author:	Jungle Jim (https://sketchfab.com/jungle_jim)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sneaker 1.5mb" (https://sketchfab.com/3d-models/sneaker-15mb-4293f6b1faa5403eb426f5e5e7cdafaf) by Jungle Jim (https://sketchfab.com/jungle_jim) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
