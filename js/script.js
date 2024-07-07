@@ -118,7 +118,7 @@ tl4.to(".page2 h1", { x: -100 }, "anim")
 // New timeline for page3 background color change
 var tl5 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".page3",
+        trigger: ".page4",
         scroller: ".main",
         start: "-10%",
         end: "10%",

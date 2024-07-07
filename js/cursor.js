@@ -2,51 +2,58 @@ const $bigBall = document.querySelector('.cursor__ball--big');
 const $smallBall = document.querySelector('.cursor__ball--small');
 const $hoverables = document.querySelectorAll('.hoverable');
 
-// Listeners
+// Listeners for cursor movement
 document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
 
-// Move the cursor
 function onMouseMove(e) {
-  TweenMax.to($bigBall, .4, {
+  TweenMax.to($bigBall, 0.4, {
     x: e.pageX - 15,
     y: e.pageY - 15
-  })
-  TweenMax.to($smallBall, .1, {
+  });
+  TweenMax.to($smallBall, 0.1, {
     x: e.pageX - 5,
     y: e.pageY - 7
-  })
+  });
 }
 
-// Hover an element
-function onMouseHover() {
-  TweenMax.to($bigBall, .3, {
+// Listeners for hover effects
+$hoverables.forEach(elem => {
+  elem.addEventListener('mouseenter', onMouseEnter);
+  elem.addEventListener('mouseleave', onMouseLeave);
+});
+
+function onMouseEnter() {
+  TweenMax.to($bigBall, 0.3, {
     scale: 4
-  })
-}
-function onMouseHoverOut() {
-  TweenMax.to($bigBall, .3, {
-    scale: 1
-  })
+  });
 }
 
-var boxes = document.querySelectorAll(".box")
-boxes.forEach(function(elem){
-    elem.addEventListener("mouseenter",function(){
-        var att = elem.getAttribute("data-image")
-        crsr.style.width = "470px"
-        crsr.style.height = "370px"
-        crsr.style.borderRadius = "0"
-        crsr.style.backgroundImage = `url(${att})`
-    })
-    elem.addEventListener("mouseleave",function(){
-        elem.style.backgroundColor = "transparent"
-        crsr.style.width = "20px"
-        crsr.style.height = "20px"
-        crsr.style.borderRadius = "50%"
-        crsr.style.backgroundImage = none
-    })
-})
+function onMouseLeave() {
+  TweenMax.to($bigBall, 0.3, {
+    scale: 1
+  });
+}
+
+// Listeners for box hover effects
+var boxes = document.querySelectorAll(".box");
+boxes.forEach(function(elem) {
+elem.addEventListener("mouseenter", function() {
+  var att = elem.getAttribute("data-image");
+  $bigBall.style.width = "470px";
+  $bigBall.style.height = "370px";
+  $bigBall.style.zIndex = "9"; // Adjust z-index as needed
+  $bigBall.style.borderRadius = "0";
+  $bigBall.style.backgroundImage = `url(${att})`;
+});
+
+
+  elem.addEventListener("mouseleave", function() {
+    elem.style.backgroundColor = "transparent"
+    $bigBall.style.width = "20px";
+    $bigBall.style.height = "20px";
+    $bigBall.style.borderRadius = "50%";
+    $bigBall.style.backgroundImage = "none";
+  });
+});
+
+
